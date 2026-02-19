@@ -1,6 +1,6 @@
-class Persona:
-    
+import pandas as pd
 
+class Persona:
     def __init__(self, id, nombre, apellido, correo, telefono, tipo="Cliente",estado="Activo"):
         self.id = id
         self.nombre = nombre
@@ -13,57 +13,96 @@ class Persona:
     def __str__(self):
         return f"{self.id};{self.nombre};{self.apellido};{self.correo};{self.telefono}" 
     
-    def determinar_id_persona(self, PERSONA_PATH):
-        with open(PERSONA_PATH, "r", encoding="utf-8") as arcPer:
-            lineas=arcPer.readlines()
-            if len(lineas)==0:
-                return 1
-            else:
-                ultimo_cliente=lineas[-1]
-                id_ultimo_cliente=int(ultimo_cliente.split(";")[0])
-        return id_ultimo_cliente+1
-        
+    def determinar_id_persona(self, df_personas):
+        if df_personas.empty:
+            return 1
+        return df_personas.iloc[-1, 0] + 1
 
-    def buscar_persona(self,PERSONA_PATH,id_persona):
-        listado_personas=self.listar_personas(PERSONA_PATH)
-        encontro=-1
-        for indice, persona in enumerate(listado_personas):
-            if persona.id == id_persona:
-                self.id = persona.id
-                self.nombre = persona.nombre
-                self.apellido = persona.apellido
-                self.correo = persona.correo
-                self.telefono = persona.telefono
-                self.tipo = persona.tipo
-                self.estado = persona.estado
-                encontro=indice
-                break
-                
-        if encontro != -1:
+    def buscar_persona(self, df_personas, id_persona):
+        persona=df_personas[df_personas['id'] == id_persona]
+        if not persona.empty:
+            self.id = persona.iloc[0]['id']
+            self.nombre = persona.iloc[0]['nombre']
+            self.apellido = persona.iloc[0]['apellido']
+            self.correo = persona.iloc[0]['correo']
+            self.telefono = persona.iloc[0]['telefono']
+            self.tipo = persona.iloc[0]['tipo']
+            self.estado = persona.iloc[0]['estado']
             return self
-        else:
-            return None
+        return None
         
-    def listar_personas(self, PERSONA_PATH):
-        personas=[]
-        with open(PERSONA_PATH, "r", encoding="utf-8") as arcPer:
-            lineas=arcPer.readlines()
-            for linea in lineas:
-                datos=linea.strip().split(";")
-                persona=Persona(int(datos[0]),datos[1],datos[2],datos[3],datos[4],datos[5],datos[6])
-                personas.append(persona)
-        return personas
+    def listar_personas(self, personas):
+        encabezado=personas.columns.tolist()
+        print(";".join(encabezado))
+        for _, fila in personas.iterrows():
+            print(fila['id'], fila['nombre'], fila['apellido'], fila['correo'], fila['telefono'], fila['tipo'], fila['estado']) 
+        return 
        
-    def grabar_persona(self, PERSONA_PATH):
-        self.id=self.determinar_id_persona(PERSONA_PATH)
-        with open(PERSONA_PATH, "a", encoding="utf-8") as arcPer:
-            arcPer.write(f"{self.id};{self.nombre};{self.apellido};{self.correo};{self.telefono};{self.tipo};{self.estado}\n")
+    def grabar_persona(self, df_personas, persona):
+        self.id=self.determinar_id_persona(df_personas)
+        persona.id=self.id
+        df_personas.loc[len(df_personas)] = vars(persona)
+        return df_personas
 
-    def modificar_persona(self, PERSONA_PATH):
-        personas=self.listar_personas(PERSONA_PATH)
-        with open(PERSONA_PATH, "w", encoding="utf-8") as arcPer:
-            for persona in personas:
-                if persona.id == self.id:
-                    arcPer.write(f"{self.id};{self.nombre};{self.apellido};{self.correo};{self.telefono};{self.tipo};{self.estado}\n")
-                else:
-                    arcPer.write(f"{persona.id};{persona.nombre};{persona.apellido};{persona.correo};{persona.telefono};{persona.tipo};{persona.estado}\n")
+
+    def modificar_persona(self, personas,persona):
+        #persona=personas[personas['id'] == persona.id]
+        #if not persona.empty:
+        personas.loc[personas['id'] == persona.id, 'nombre'] = persona.nombre
+        personas.loc[personas['id'] == persona.id, 'apellido'] = persona.apellido
+        personas.loc[personas['id'] == persona.id, 'correo'] = persona.correo
+        personas.loc[personas['id'] == persona.id, 'telefono'] = persona.telefono
+        personas.loc[personas['id'] == persona.id, 'tipo'] = persona.tipo
+        personas.loc[personas['id'] == persona.id, 'estado'] = persona.estado
+        return personas
+    
+class Productos:
+    def __init__(self, id,   nombre, descripcion, precio, stock, estado="Activo"):
+        self.id = id
+        self.nombre = nombre
+        self.descripcion = descripcion
+        self.precio = precio
+        self.stock = stock
+        self.estado = estado
+    
+    def __str__(self):
+        return f"{self.id};{self.nombre};{self.descripcion};{self.precio};{self.stock};{self.estado}"
+   
+    def determinar_id_producto(self, df_productos):
+        if df_productos.empty:
+            return 1
+        return df_productos.iloc[-1, 0] + 1
+    
+    def grabar_producto(self, productos, producto):
+        self.id=self.determinar_id_producto(productos)
+        producto.id=self.id
+        productos.loc[len(productos)] = vars(producto)
+        return productos
+    
+    def modificar_producto(self, productos, producto):
+        productos.loc[productos['id'] == producto.id, 'nombre'] = producto.nombre
+        productos.loc[productos['id'] == producto.id, 'descripcion'] = producto.descripcion
+        productos.loc[productos['id'] == producto.id, 'precio'] = producto.precio
+        productos.loc[productos['id'] == producto.id, 'stock'] = producto.stock
+        productos.loc[productos['id'] == producto.id, 'estado'] = producto.estado
+        return productos
+    
+    def buscar_producto(self, productos, id_producto):
+        producto=productos[productos['id'] == id_producto]
+        if not producto.empty:
+            self.id = producto.iloc[0]['id']
+            self.nombre = producto.iloc[0]['nombre']
+            self.descripcion = producto.iloc[0]['descripcion']
+            self.precio = producto.iloc[0]['precio']
+            self.stock = producto.iloc[0]['stock']
+            self.estado = producto.iloc[0]['estado']
+            return self
+        return None
+    
+    def listar_productos(self, productos):
+        encabezado=productos.columns.tolist()
+        print(";".join(encabezado))
+        for _, fila in productos.iterrows():
+            print(fila['id'], fila['nombre'], fila['descripcion'], fila['precio'], fila['stock'], fila['estado']) 
+        return
+    
