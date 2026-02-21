@@ -4,6 +4,7 @@ from pathlib import Path
 from src import librerias_propias as lbp
 from src import clientes_df as cli
 from src import productos_df as pro
+from src import ventas_df as ven
 
 
 # Declaracion de rutas base
@@ -31,7 +32,7 @@ def main():
             case "2":
                 pro.main()   
             case "3":
-                print("Efectuar Ventas")
+                ven.main()
             case "4":
                 print("Reportes")
             case "5":

@@ -8,13 +8,13 @@ id,nombre,apellido,correo,telefono,tipo,estado
 7,Eligia,Trillo,lcervantes@example.net,+34941 75 12 66,Regular,Activo
 8,Delia,Soto,rgalvan@example.net,+34 925116974,VIP,Inactivo
 9,Rosenda,Nevado,montserratbravo@example.com,+34932 405 725,Regular,Inactivo
-10,Estelvina,Cañete diaz,Ecd@ht.com,+34 886 52 50 90,Regular,Activo
+10,Etelvina,Cañete,leoncio56@example.com,+34 886 52 50 90,Regular,Activo
 11,Estefanía,Mulet,nazaretamoros@example.org,+34885 879 135,VIP,Activo
 12,Esperanza,Rey,maria-pilar28@example.com,+34 942 39 87 45,VIP,Inactivo
 13,Renato,Sosa,hortensia54@example.net,+34957 443 967,VIP,Inactivo
 14,Moreno,Melero,bartolometirado@example.org,+34864020760,Regular,Activo
 15,Guiomar,Chaves,arambururufina@example.org,+34 900 80 97 41,VIP,Activo
-16,Vasco,Cruz medina,cr@example.com,+34 885677826,VIP,Activo
+16,Vasco,Cruz,victoriano00@example.com,+34 885677826,VIP,Activo
 17,Cristóbal,Escamilla,edelmiro55@example.net,+34 888 925 022,Premium,Activo
 18,Chus,Suarez,albadavila@example.net,+34 748587799,VIP,Inactivo
 19,Francisco Jose,Isern,santosguijarro@example.org,+34 988 35 34 33,VIP,Inactivo
@@ -208,7 +208,7 @@ id,nombre,apellido,correo,telefono,tipo,estado
 207,Sofía,Sierra,modesto15@example.org,+34878 000 024,Regular,Inactivo
 208,Octavia,Alcolea,benetcintia@example.net,+34926658778,VIP,Inactivo
 209,Lina,Escolano,mcriado@example.net,+34922236511,Premium,Inactivo
-210,Plinio dario,Vega,PDV@ht.com,+34820 37 73 47,Premium,Activo
+210,Plinio,Vega,tovaralicia@example.org,+34820 37 73 47,Premium,Activo
 211,Plácido,Seguí,zricart@example.org,+34873278991,Premium,Activo
 212,Maximiano,Ponce,monicasalvador@example.net,+34920 62 37 32,VIP,Inactivo
 213,Natividad,Doménech,rocaluna@example.net,+34 800 89 22 14,Regular,Inactivo
