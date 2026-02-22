@@ -32,6 +32,7 @@ def main():
                 resp=input("Desea guardar el cliente? (s/n)")
                 if resp.lower()=="s":
                     df_clientes=cliente.grabar_persona(df_clientes,cliente)
+                    #df_clientes.to_csv(CLIENTES_PATH, index=False)
             case "2":
                 os.system("cls")
                 print("Gestión de clientes")
@@ -61,6 +62,7 @@ def main():
                             resp=input("Desea guardar los cambios? (s/n)")
                             if resp.lower()=="s":
                                 df_clientes=cliente.modificar_persona(df_clientes, cliente)
+                                #df_clientes.to_csv(CLIENTES_PATH, index=False)
                     else:
                         print("Cliente no encontrado o inactivo")
                         nada=input("Presione Enter para continuar...")
@@ -76,6 +78,7 @@ def main():
                         resp=input("Desea dar de baja al cliente? (s/n)")
                         if resp.lower()=="s":
                             df_clientes.loc[df_clientes['id'] == cliente.id, 'estado'] = 'Inactivo'
+                            #df_clientes.to_csv(CLIENTES_PATH, index=False)
                     else:
                         print("Cliente no encontrado o inactivo")
                         nada=input("Presione Enter para continuar...")
@@ -91,6 +94,7 @@ def main():
                         resp=input("Desea reactivar al cliente? (s/n)")
                         if resp.lower()=="s":
                             df_clientes.loc[df_clientes['id'] == cliente.id, 'estado'] = 'Activo'
+                            #df_clientes.to_csv(CLIENTES_PATH, index=False)
                     else:
                         print("Cliente no encontrado o ya activo")
                         nada=input("Presione Enter para continuar...")

@@ -5,6 +5,7 @@ from src import librerias_propias as lbp
 from src import clientes_df as cli
 from src import productos_df as pro
 from src import ventas_df as ven
+from src import reportes_df as rep
 
 
 # Declaracion de rutas base
@@ -34,7 +35,7 @@ def main():
             case "3":
                 ven.main()
             case "4":
-                print("Reportes")
+                rep.main()
             case "5":
                 break
             

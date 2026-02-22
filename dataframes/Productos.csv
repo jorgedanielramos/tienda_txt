@@ -10,7 +10,7 @@ id,nombre,descripcion,precio,stock,estado
 9,Sueño,Hacia popular guerra esa misma jamás mayores.,66.96,223,Agotado
 10,Paso,Deseo político ésta cosas comunidad sectores frente.,48.89,176,Agotado
 11,Muerte,Programas largo destino señor militar base.,152.94,406,Disponible
-12,Especie,Cambios proyectos conocimiento producción.,48.33,459,Disponible
+12,Especie,Cambios proyectos conocimiento producción.,48.33,457,Disponible
 13,Justicia,Muerto medidas esas miedo valores juego solución.,171.79,227,Agotado
 14,Asociación,Futuro mano ellos hubiera llega campaña máximo.,189.89,409,Agotado
 15,Existencia,Civil eran unos asociación consumo torno.,244.67,242,Agotado
@@ -32,7 +32,7 @@ id,nombre,descripcion,precio,stock,estado
 31,México,Ellas humana dijo estados.,80.17,475,Disponible
 32,Tal,Baja vista conciencia afirmó desde precio público.,338.06,476,Disponible
 33,Mes,Presidente lugar va iba.,385.45,332,Disponible
-34,Guerra,Justicia pesetas luego partido hoy.,16.85,325,Agotado
+34,Guerra,Justicia pesetas luego partido hoy.,16.85,324,Agotado
 35,Igual,Carta haciendo hermano muerto dejó hijo da sistemas.,251.74,135,Agotado
 36,Valor,Fuera queda sería agua así pedro piel.,478.21,330,Disponible
 37,Abril,Mucha dinero antes mar centros amigo pesetas seguro.,16.79,280,Disponible
@@ -74,11 +74,11 @@ id,nombre,descripcion,precio,stock,estado
 73,Meses,Vida hacía carrera pudo unos.,345.96,315,Disponible
 74,Puerta,Precisamente voy vez república u militar.,155.29,404,Agotado
 75,Iba,Amigos producto doctor.,196.74,342,Agotado
-76,Había,Suelo orden victoria precio.,379.02,261,Disponible
+76,Había,Suelo orden victoria precio.,379.02,239,Disponible
 77,He,García blanco ni imágenes quien.,369.38,498,Agotado
-78,Aunque,Tan considera pone oficial otra.,168.02,89,Agotado
+78,Aunque,Tan considera pone oficial otra.,168.02,88,Agotado
 79,Humana,Orden necesidad m casi.,108.65,476,Agotado
-80,Tenemos,Izquierda pueblo meses años.,477.47,26,Agotado
+80,Tenemos,Izquierda pueblo meses años.,477.47,20,Agotado
 81,Joven,Centros españoles valor lleva bueno habrá.,140.1,414,Agotado
 82,Dado,Ejemplo función ojos cada.,171.63,291,Disponible
 83,Teatro,Va encuentro presencia mismos.,429.77,498,Agotado
@@ -193,9 +193,9 @@ id,nombre,descripcion,precio,stock,estado
 192,Grandes,Banco problema voy cosa suerte dólares.,198.44,494,Agotado
 193,Alrededor,Países sur director aire manos te.,69.1,6,Agotado
 194,Pasar,Compañía objetivo torno aire millones lo corte.,21.71,70,Agotado
-195,Español,Educación palabras millones jorge fuentes.,173.64,80,Disponible
+195,Español,Educación palabras millones jorge fuentes.,173.64,5,Disponible
 196,Texto,Interés llegado hombre esas propios.,213.21,499,Disponible
-197,Universidad,Han también cámara pasa.,145.21,62,Disponible
-198,Cómo,Aunque larga empresa capital natural serán encontrar.,106.66,330,Agotado
-199,Bastante,Lejos oposición oposición hubo contrario ninguna.,389.01,288,Disponible
-200,Viene,Cierta equipo tal llegado él informe existencia.,344.29,27,Disponible
+197,Universidad,Han también cámara pasa.,145.21,50,Disponible
+198,Cómo,Aunque larga empresa capital natural serán encontrar.,106.66,300,Agotado
+199,Bastante,Lejos oposición oposición hubo contrario ninguna.,389.01,256,Disponible
+200,Viene,Cierta equipo tal llegado él informe existencia.,344.29,5,Disponible

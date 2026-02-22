@@ -49,12 +49,16 @@ def validar_stock():
 
 def validar_numero_int(mensaje) -> int:
     while True:
-        numero=int(input(mensaje))
-        if numero.isdigit() and numero > 0:
-            return int(numero)
-        else:
-            print("Valor no válido. Intente nuevamente.")   
+        try:
+            numero=int(input(mensaje))
+            if numero >= 0:
+                return numero
+            else:
+                print("Valor no válido. Intente nuevamente.")   
+        except ValueError:
+            print("Valor no válido. Intente nuevamente.")
 
+            
 def verificar_archivos():
     BASE_DIR = Path(__file__).resolve().parents[1]
     BD_DIR = BASE_DIR / "dataframes"
