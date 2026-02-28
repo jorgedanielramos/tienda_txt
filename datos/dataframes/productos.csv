@@ -98,7 +98,7 @@ id,nombre,descripcion,precio,stock,estado
 97,Plan,Vista trata problemas varias fuera.,388.66,322,Disponible
 98,Además,Cargo atención grupos voluntad momento muchos.,428.02,320,Disponible
 99,Dicen,Uno conjunto principales abril.,134.55,419,Disponible
-100,Especial,Son sociales violencia.,435.09,161,Agotado
+100,Especial,Son sociales violencia.,435.09,159,Agotado
 101,Siendo,Juego interés hoy internacional.,65.27,195,Disponible
 102,Debía,Esas vivir metros máximo.,396.64,64,Disponible
 103,Tan,Muerto imposible estaba tenía.,374.6,470,Disponible
@@ -199,3 +199,4 @@ id,nombre,descripcion,precio,stock,estado
 198,Cómo,Aunque larga empresa capital natural serán encontrar.,106.66,300,Agotado
 199,Bastante,Lejos oposición oposición hubo contrario ninguna.,389.01,256,Disponible
 200,Viene,Cierta equipo tal llegado él informe existencia.,344.29,5,Disponible
+201,Juego vasos cristal,Juego de 12 piezas,500.0,34,Activo

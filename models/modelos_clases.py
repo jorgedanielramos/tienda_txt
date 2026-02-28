@@ -57,7 +57,7 @@ class Persona:
         return personas
     
 class Productos:
-    def __init__(self, id,   nombre, descripcion, precio, stock, estado="Activo"):
+    def __init__(self, id,nombre, descripcion, precio, stock, estado="Activo"):
         self.id = id
         self.nombre = nombre
         self.descripcion = descripcion

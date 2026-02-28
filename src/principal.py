@@ -1,19 +1,14 @@
 import os
-import pandas as pd
+
 from pathlib import Path
-from src import librerias_propias as lbp
-from src import clientes_df as cli
-from src import productos_df as pro
-from src import ventas_df as ven
-from src import reportes_df as rep
 
-
-# Declaracion de rutas base
-BASE_DIR = Path(__file__).resolve().parents[1]
-BD_DIR = BASE_DIR / "dataframes"
-CLIENTES_PATH = BD_DIR / "Clientes.csv"
-PRODUCTOS_PATH = BD_DIR / "Productos.csv"
-VENTAS_PATH = BD_DIR / "Ventas.csv"
+import src.lib.librerias_propias as lbp
+import src.dataframes.clientes_df as cli
+from src.ui import interfaz as ui
+import src.dataframes.productos_df as pro
+import src.dataframes.ventas_df as ven
+import src.dataframes.reportes_df as rep
+from config import BASE_DIR, BD_DIR, CLIENTES_PATH, PRODUCTOS_PATH, FACTURAS_PATH, DETALLES_PATH
 
 def main():
     lbp.verificar_archivos()
@@ -26,7 +21,7 @@ def main():
               "Efectuar Ventas ......3",
               "Reportes..............4",
               "Salir.................5"]
-        opcion=lbp.seleccionar_opcion("Menú principal",opciones)
+        opcion=ui.seleccionar_opcion("Menú principal",opciones)
         match opcion:
             case "1":
                 cli.main()

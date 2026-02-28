@@ -1,24 +1,12 @@
 import pandas as pd
-#import matplotlib.pyplot as plt
-#import seaborn as sns
-from . import librerias_propias as lbp
+import src.lib.librerias_propias as lbp
 from datetime import datetime
 import os
-from pathlib import Path
+
 from models.modelos_clases import Persona, Productos
-from src import clientes_df, productos_df
-
-# Declaracion de rutas base
-BASE_DIR = Path(__file__).resolve().parents[1]
-BD_DIR = BASE_DIR / "dataframes"
-CLIENTES_PATH = BD_DIR / "clientes.csv"
-PRODUCTOS_PATH = BD_DIR / "productos.csv"
-FACTURAS_PATH = BD_DIR / "facturas.csv"
-DETALLES_PATH = BD_DIR / "detalles.csv"
-
-#def __init__():   
-   
-
+#from src.dataframes import clientes_df, productos_df
+from src.ui import interfaz as ui
+from config import FACTURAS_PATH, DETALLES_PATH, CLIENTES_PATH, PRODUCTOS_PATH
     
 def main():
     df_facturas = pd.read_csv(FACTURAS_PATH)
@@ -32,7 +20,7 @@ def main():
         os.system("cls")
 
         print("Gestión de ventas")  
-        opcion=lbp.seleccionar_opcion("Gestión de ventas",opciones)
+        opcion=ui.seleccionar_opcion("Gestión de ventas",opciones)
         match opcion:
             case "1":
                df_facturas, df_detalles,df_productos = crear_factura(df_facturas, df_detalles, df_clientes, df_productos)

@@ -1,5 +1,0 @@
-id,nombre,apellido,correo,telefono,tipo,estado
-1.0,Jorge,Ramos,jr@h.com,6666666666.0,Cliente,Activo
-2.0,Marisol,Garcia,mgarcia@ht.com,8888888888.0,Cliente,Activo
-3.0,Migel,Kilo,mk@h.com,,Cliente,Activo
-4.0,Karol,Medina,kmw@h.com,123.0,Cliente,Inactivo

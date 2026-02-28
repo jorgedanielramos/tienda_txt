@@ -1,15 +1,6 @@
-import os
 from pathlib import Path
 import pandas as pd
-
-
-def seleccionar_opcion(titulo, opciones):
-    os.system("cls")
-    print(titulo)
-    for opcion in opciones:
-        print(opcion)
-    op=input("Indique opción:")
-    return op
+from config import CLIENTES_PATH, PRODUCTOS_PATH, FACTURAS_PATH,DETALLES_PATH
 
 def validar_correo():
     while True:
@@ -60,13 +51,13 @@ def validar_numero_int(mensaje) -> int:
 
             
 def verificar_archivos():
-    BASE_DIR = Path(__file__).resolve().parents[1]
-    BD_DIR = BASE_DIR / "dataframes"
-    CLIENTES_PATH = BD_DIR / "Clientes.csv"
-    PRODUCTOS_PATH = BD_DIR / "Productos.csv"
-    FACTURAS_PATH = BD_DIR / "Facturas.csv"
-    DETALLES_PATH = BD_DIR / "Detalles.csv"
-    BD_DIR.mkdir(exist_ok=True)
+    #BASE_DIR = Path(__file__).resolve().parents[1]
+    #BD_DIR = BASE_DIR / "dataframes"
+    #CLIENTES_PATH = BD_DIR / "Clientes.csv"
+    #PRODUCTOS_PATH = BD_DIR / "Productos.csv"
+    #FACTURAS_PATH = BD_DIR / "Facturas.csv"
+    #DETALLES_PATH = BD_DIR / "Detalles.csv"
+    #BD_DIR.mkdir(exist_ok=True)
     if not CLIENTES_PATH.exists():      
         df_clientes = pd.DataFrame(columns=['id', 'nombre', 'apellido', 'correo', 'telefono','tipo', 'estado'])
         df_clientes.to_csv(CLIENTES_PATH, index=False)

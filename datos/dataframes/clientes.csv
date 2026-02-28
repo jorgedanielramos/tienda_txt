@@ -295,8 +295,10 @@ id,nombre,apellido,correo,telefono,tipo,estado
 294,Ramiro,Verdugo,efigueras@example.net,+34 877 347 669,Premium,Activo
 295,Vito,Folch,lupe31@example.com,+34877 810 454,VIP,Activo
 296,Claudia,Bermejo,melaniacuesta@example.net,+34825841596,Premium,Inactivo
-297,Amparo,Uriarte,aramburuabraham@example.com,+34 844 803 992,Premium,Inactivo
+297,Amparo daniela,Uriarte,amparod@h.com,+34 844 803 992,Premium,Activo
 298,Máxima,Sola,octavio28@example.net,+34 973 98 01 75,Regular,Activo
 299,Ruperta,Múñiz,osvaldocespedes@example.com,+34 827 493 944,VIP,Activo
 300,Pánfilo,Riquelme,monicaavila@example.net,+34 945 217 197,VIP,Activo
 301,Jorge d.,Ramos c.,jdramosc@example.com,8888888888,Cliente,Activo
+302,Gregorio,Quevedo,quevedog@g.com,,Cliente,Activo
+303,Gladis,Villavicencio,gvilla@hotmail.com,,Cliente,Activo
